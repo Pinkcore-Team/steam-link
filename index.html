@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting to Steam...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #333;
+      text-align: center;
+      padding: 2em;
+    }
+    .message {
+      max-width: 420px;
+      margin: 10% auto;
+    }
+    a {
+      color: #0a58ca;
+    }
+  </style>
+  <script>
+    // 嘗試開啟 Steam App
+    window.location.href = "steam://store/3510960";
+
+    // 若無法啟動，2 秒後轉跳到 Steam 網頁版（含 utm）
+    setTimeout(function () {
+      window.location.href = "https://store.steampowered.com/app/3510960?utm_source=meta&utm_campaign=steam_ads&utm_medium=cpa";
+    }, 2000);
+  </script>
+</head>
+<body>
+  <div class="message">
+    <h2>Opening in Steam App...</h2>
+    <p>If nothing happens,<br>
+      <a href="https://store.steampowered.com/app/3510960?utm_source=meta&utm_campaign=steam_ads&utm_medium=cpa">
+        click here to open the Steam store page
+      </a>.
+    </p>
+  </div>
+</body>
+</html>
